@@ -1,6 +1,6 @@
 ## PLAT v1.47 OEM System-Service Disable
 
-**The included scripts were made to assist Tivity technicians with disabling Samsung OEM installed system services, `com.sec.*` packages.**
+**The included scripts were made to assist technicians with disabling Samsung OEM installed system services, `com.sec.*` packages.**
 
 ####Requirements
 - Windows machine to execute the included scripts
