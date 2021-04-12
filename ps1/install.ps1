@@ -16,7 +16,7 @@ function Use-RunAs
           {  
             try 
             {  
-                $arg = "-ExecutionPolicy Bypass -file `"$($MyInvocation.ScriptName)`"" 
+                $arg = "-noexit -ExecutionPolicy Bypass -file `"$($MyInvocation.ScriptName)`"" 
                 Start-Process "$psHome\powershell.exe" -Verb Runas -ArgumentList $arg -ErrorAction 'stop'  
             } 
             catch 
