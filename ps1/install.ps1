@@ -16,7 +16,7 @@ function Use-RunAs
           {  
             try 
             {  
-                $arg = "-file `"$($MyInvocation.ScriptName)`"" 
+                $arg = "-ExecutionPolicy Bypass -file `"$($MyInvocation.ScriptName)`"" 
                 Start-Process "$psHome\powershell.exe" -Verb Runas -ArgumentList $arg -ErrorAction 'stop'  
             } 
             catch 
@@ -35,5 +35,5 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
-choco install adb
+choco install adb -y
 adb devices
